@@ -29,7 +29,7 @@ public class AuthServlet extends HttpServlet {
         throws ServletException, IOException{
             PrintWriter out = response.getWriter();
 
-            String name = request.getParameter("texto");
+            String name = request.getParameter("name");
             String senha = request.getParameter("senha");
 
             ServletConfig config = this.getServletConfig();

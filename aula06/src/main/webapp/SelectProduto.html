@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> 
+    <title>Questoes</title> 
     </head>
-
     <body>
-        <h1>Escolha o Produto</h1>
-        <form method="POST" action="Controller">
-            <p>Selecione o Produto</p>
+        
+        <div class="main">
+            <h1 class="login">Escolha seu produto</h1>
+            <form method="POST" action="Controller">
+            <label class="lb-prod">Selecione o Produto</label>
+            <br>
             <select name="produto" size="1">
                 <option value="1">Arroz</option>
                 <option value="2">Feijão</option>
                 <option value="3">Macarrão</option>
                 <option value="4">Queijo</option>
                 <option value="5">Leite</option>
-            <input type="submit" value="Enviar"/>
-        </form>
+                <input class="bt-prod" type="submit" value="Enviar"/>
+            </form>
+        </div>
     </body>
 </html>

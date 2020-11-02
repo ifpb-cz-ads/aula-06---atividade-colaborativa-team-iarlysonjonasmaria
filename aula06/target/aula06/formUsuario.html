@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> 
+    <title>Questoes</title> 
+    </head>
     <body>
-        <h1>Login</h1>
-        <form method="POST" action="Auth">
-            <label for="name">Digite seu nome de usuario</label>
-            <input type="text" name="name" id="name">
-            <label for="senha">Digete sua senha</label>
-            <input type="password" name="senha" id="senha">
-            <input type="submit">
-        </form>
+        
+        <div class="main">
+            <h1 class="login">Login</h1>
+
+            <form method="POST" action="Auth">
+                <label class="lb-nome" for="name">Digite seu nome de usuario</label>
+                <br>
+                <input type="text" name="name" id="name">
+                <br>
+                <label class="lb-senha" for="senha">Digite sua senha</label>
+                <br>
+                <input type="password" name="senha" id="senha">
+                
+                <button class="bt-login">Enviar</button>
+            </form>
+        </div>
     </body>
 </html>
