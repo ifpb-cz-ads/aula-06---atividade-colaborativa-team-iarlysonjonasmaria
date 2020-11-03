@@ -25,9 +25,9 @@ public class ProdutoView extends HttpServlet {
             out.println("Detalhes do Produto");
             out.println("</h1>");
             out.println("<p>");
-            out.println("Nome do produto: " + produto.getNomeProduto());
-            out.println("Marca do Produto: " + produto.getTamanho());
-            out.println("Marca do Produto: " + produto.getMarca());
+            out.println("Nome do Produto: " + produto.getNomeProduto());
+            out.println("<br>Tamanho do Produto: " + produto.getTamanho());
+            out.println("<br>Marca do Produto: " + produto.getMarca());
             out.println("</p>");
             out.println("</body>");
             out.println("</html>");
