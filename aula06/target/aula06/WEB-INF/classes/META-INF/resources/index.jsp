@@ -1,23 +1,23 @@
 <html>
+    <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8"> 
     <title>Questoes</title> 
     </head>
     <body>
 
-        <fieldset style="background: #eeeeee;"> 
-            <legend>Questao 01 </legend>
-            <form style="text-align: center;" method="POST" action="SelectProduto.html"> 
-                <input type="submit" value="Questao01">      
-            </form> 
-        </fieldset>
+        <div class="main">
+            <h1>Selecione a opcao que deseja executar:</h1>
 
-    <fieldset style="background: #eeeeee;"> 
-    <legend>Questao 02 </legend>
-     <form style="text-align: center;" method="GET" action="formUsuario.html"> 
-         <input type="submit" value="Questao02">
-      </form> 
-     </fieldset>
+            <form action="SelectProduto.html" method="POST">
+            <button class="q1">Sistema de produtos</button>
+            </form>
 
+            <form action="formUsuario.html" method="POST">
+            <button class="q2">Sistema de login</button>
+            </form>
+            
+        </div>
 
 </body>
 </html>

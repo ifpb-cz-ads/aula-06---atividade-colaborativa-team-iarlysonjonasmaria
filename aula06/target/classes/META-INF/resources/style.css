@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+  background-color: #EAEDED;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1 {
+    position: absolute;
+    top: 35%;
+    color: #581845;
+}
+
+button {
+    position: absolute;
+    left: 39%;
+    width: 20%;
+    height: 50px;
+    outline: none;
+    background-color: #581845;
+    color: #FFF;
+    border: solid 2px #581845;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+}
+input {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 20%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    outline: none;
+    -webkit-transition: all 0.2s;
+    border: solid 2px #581845;
+    transition: all 0.2s;
+    color: #581845;
+    text-align: center;
+}
+select {
+    position: absolute;
+    top: 41%;
+    left: 45%;
+    width: 10%;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    outline: none;
+    -webkit-transition: all 0.2s;
+    border: solid 2px #581845;
+    transition: all 0.2s;
+    color: #581845;
+}
+
+.q1 {
+    top: 45%;
+}
+
+.q2 {
+    top: 55%;
+}
+
+.login {
+    top: 25%;
+}
+
+label {
+    font-size: 20px;
+    color: #581845;
+    font-weight: bold;
+}
+
+.lb-nome {
+    position: absolute;
+    top: 35%;
+    left: 41%;
+}
+
+.lb-senha {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+.lb-prod {
+    position: absolute;
+    top: 35%;
+    left: 43.5%;
+}
+
+#name {
+    position: absolute;
+    top: 40%;
+    left: 39%;
+}
+
+#senha {
+    position: absolute;
+    top: 55%;
+    left: 39%;
+}
+
+.bt-login{
+    top: 65%;
+    left: 38.95%;
+}
+
+.bt-prod{
+    position: absolute;
+    top: 50%;
+    left: 39%;
+    width: 20%;
+    height: 50px;
+    outline: none;
+    background-color: #581845;
+    color: #FFF;
+    border: solid 2px #581845;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+}

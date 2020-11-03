@@ -2,6 +2,8 @@ package br.edu.ifpb;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.Key;
+import java.security.KeyStore.Entry;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +16,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.taglibs.standard.tag.common.xml.IfTag;
 
 @WebServlet(
 urlPatterns  = {"/Auth"},
@@ -33,20 +37,45 @@ public class AuthServlet extends HttpServlet {
             String senha = request.getParameter("senha");
 
             ServletConfig config = this.getServletConfig();
-            HashMap<Usuario, Usuario> usuario = new HashMap<Usuario, Usuario>( );
+            HashMap<String, Usuario> usuario = new HashMap<String, Usuario>( );
             Enumeration<String> paramNames = config.getInitParameterNames();
             
 
           
             while (paramNames.hasMoreElements()) {
-            String nome = paramNames.nextElement();
-            String value = config.getInitParameter(nome);
-            usuario.put( new Usuario(nome, config.getInitParameter(nome)), 
-            new Usuario(senha, config.getInitParameter(value)) );
-        }
-           
-            out.println(usuario);
+            String chave = paramNames.nextElement();
+            String value = config.getInitParameter(chave);
+            usuario.put(chave, new Usuario(chave, value));
+            }
             
-        }
+            Usuario usarioencontrado = null;
+            for (Map.Entry<String, Usuario> usuarios : usuario.entrySet()) {
+                System.out.println(usuarios.getValue().getNome());
+                if(usuarios.getValue().getNome().equalsIgnoreCase(name) && usuarios.getValue().getSenha().equalsIgnoreCase(senha)){
+                    usarioencontrado = usuarios.getValue();
+                }
+                    
+            }
+            response.setContentType("text/html");
+            if(usarioencontrado != null){                   
+                out.println("<html>");
+                out.println("<body>");
+                out.println("<h1>");
+                out.println("Usuário " + usarioencontrado.getNome() + " autenticado!");
+                out.println("</h1>");
+                out.println("</body>");
+                out.println("</html>");
+                out.close();
+                } 
+                else{
+                out.println("<html>");
+                out.println("<body>");
+                out.println("<h1>");
+                out.println("Usuário ou senha não cadastrado!");
+                out.println("</h1>");
+                out.println("</body>");
+                out.println("</html>");
+                out.close();    
+                }
+           }
 }
-
